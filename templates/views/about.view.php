@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<html lang="en">
 <?php
  require_once __DIR__ . '/inicio.part.php';
- ?>
+?>
  
 <body id="page-top">
 
 <?php
  require_once __DIR__ . '/navegacion.part.php';
- ?>
+?>
 
 <!-- Principal Content Start-->
    <div id="about">
@@ -125,33 +124,11 @@
         </div>
       <!-- End of Pricing Tables -->
 
-      <!-- Clients Feedback -->
         <div class="row feedback text-center">
            <h3>CLIENTS FEEDBACK</h3>
            <hr>
-           <div class="col-xs-12 col-sm-3">
-             <img class="img-responsive" src="/public/images/clients/client1.jpg" alt="client's picture">
-             <h5>MISS BELLA</h5>
-             <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</q>
-           </div>
-           <div class="col-xs-12 col-sm-3">
-             <img class="img-responsive" src="/public/images/clients/client2.jpg" alt="client's picture">
-             <h5>DON PENO</h5>
-             <q>Tempora ea ratione vel nisi, qui perferendis nulla, fugit aut, beatae, tempore modi.</q>
-           </div>
-           <div class="col-xs-12 col-sm-3">
-             <img class="img-responsive" src="/public/images/clients/client3.jpg" alt="client's picture">
-             <h5>SWEETY</h5>
-             <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</q>
-           </div>
-           <div class="col-xs-12 col-sm-3">
-             <img class="img-responsive" src="/public/images/clients/client4.jpg" alt="client's picture">
-             <h5>LADY</h5>
-             <q>Tempora ea ratione vel nisi, qui perferendis nulla, fugit aut, beatae, tempore modi.</q>
-           </div>
-        </div>
-      <!-- End of Clients Feedback --> 
-       
+           <?php require_once __DIR__ . '/imagen-cliente.part.php'; ?>
+        </div>       
       </div>
     <!-- End of container Box -->  
    </div>
@@ -159,6 +136,6 @@
 
 <?php
   require_once __DIR__ . '/fin.part.php';
-  ?>
+?>
 </body>
 </html>

@@ -1,26 +1,19 @@
 <?php
-
-namespace src\entity;
-
 class Imagen
 {
-    // Atributos privados
-    private int $id;
-    private string $nombre;
-    private string $descripcion;
-    private string $categoria;
-    private int $numVisualizaciones;
-    private int $numLikes;
-    private int $numDownloads;
+    private $id;
+    private $nombre;
+    private $descripcion;
+    private $categoria;
+    private $numVisualizaciones;
+    private $numLikes;
+    private $numDownloads;
 
-    // Constantes de rutas de imágenes
     const RUTA_IMAGENES_PORTFOLIO = '/public/images/index/portfolio/';
     const RUTA_IMAGENES_GALERIA = '/public/images/index/gallery/';
     const RUTA_IMAGENES_CLIENTES = '/public/images/clients/';
 
-    // Constructor
-    public function __construct(string $nombre, string $descripcion, string $categoria, int $numVisualizaciones = 0, int $numLikes = 0, int $numDownloads = 0)
-    {
+    public function __construct($nombre = "", $descripcion = "", $categoria = "", $numVisualizaciones = 0, $numLikes = 0, $numDownloads = 0) {
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->categoria = $categoria;
@@ -29,99 +22,77 @@ class Imagen
         $this->numDownloads = $numDownloads;
     }
 
-    // Getters
-    public function getId(): int
-    {
+    public function getId() {
         return $this->id;
     }
 
-    public function getNombre(): string
-    {
+    public function getNombre() {
         return $this->nombre;
     }
 
-    public function getDescripcion(): string
-    {
+    public function getDescripcion() {
         return $this->descripcion;
     }
 
-    public function getCategoria(): string
-    {
+    public function getCategoria() {
         return $this->categoria;
     }
 
-    public function getNumVisualizaciones(): int
-    {
+    public function getNumVisualizaciones() {
         return $this->numVisualizaciones;
     }
 
-    public function getNumLikes(): int
-    {
+    public function getNumLikes() {
         return $this->numLikes;
     }
 
-    public function getNumDownloads(): int
-    {
+    public function getNumDownloads() {
         return $this->numDownloads;
     }
 
-    // Setters con retorno de la clase
-    public function setNombre(string $nombre): Imagen
-    {
+    public function setNombre($nombre): Imagen {
         $this->nombre = $nombre;
         return $this;
     }
 
-    public function setDescripcion(string $descripcion): Imagen
-    {
+    public function setDescripcion($descripcion): Imagen {
         $this->descripcion = $descripcion;
         return $this;
     }
 
-    public function setCategoria(string $categoria): Imagen
-    {
+    public function setCategoria($categoria): Imagen {
         $this->categoria = $categoria;
         return $this;
     }
 
-    public function setNumVisualizaciones(int $numVisualizaciones): Imagen
-    {
+    public function setNumVisualizaciones($numVisualizaciones): Imagen {
         $this->numVisualizaciones = $numVisualizaciones;
         return $this;
     }
 
-    public function setNumLikes(int $numLikes): Imagen
-    {
+    public function setNumLikes($numLikes): Imagen {
         $this->numLikes = $numLikes;
         return $this;
     }
 
-    public function setNumDownloads(int $numDownloads): Imagen
-    {
+    public function setNumDownloads($numDownloads): Imagen {
         $this->numDownloads = $numDownloads;
         return $this;
     }
 
-    // Método _toString
-    public function __toString(): string
-    {
+    public function __toString() {
         return $this->descripcion;
     }
 
-    // Métodos para obtener las URLs
-    public function getUrlPortfolio(): string
-    {
+    public function getUrlPortfolio(){
         return self::RUTA_IMAGENES_PORTFOLIO . $this->getNombre();
     }
 
-    public function getUrlGaleria(): string
-    {
+    public function getUrlGaleria(){
         return self::RUTA_IMAGENES_GALERIA . $this->getNombre();
     }
 
-    public function getUrlClientes(): string
-    {
+    public function getUrlClientes(){
         return self::RUTA_IMAGENES_CLIENTES . $this->getNombre();
     }
 }
-?>
