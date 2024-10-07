@@ -33,6 +33,10 @@ require_once __DIR__ . '/../../src/utils/utils.class.php';
               <?php if (utils::esOpcionMenuActiva('/contact.php')==true)
               echo '<li class="active lien">'; else echo '<li class=”0lien”>';?>
               <a href="contact.php"><i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
+
+              <?php if (utils::esOpcionMenuActiva('/galeria.php')==true)
+              echo '<li class="active lien">'; else echo '<li class=”0lien”>';?>
+              <a href="galeria.php"><i class="fa fa-phone-square sr-icons"></i> Galeria</a></li>
             </ul>
          </div>
      </div>
